@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+
 module.exports = (req, res, next) => {
   const { authorization } = req.headers;
   if (authorization) {
@@ -18,3 +19,4 @@ module.exports = (req, res, next) => {
     });
   }
 };
+//had a mystery issue that resolved itself keep an eye on this guy
