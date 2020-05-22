@@ -42,7 +42,9 @@ router.post("/login", (req, res) => {
           // produce and send a token that includes the username the user
           const token = generateToken(user);
 
-          res.status(200).json({ message: "Welcome to our API", token });
+          res
+            .status(200)
+            .json({ message: `Welcome ${user.username}! to me api`, token });
         } else {
           res.status(401).json({ message: "Invalid credentials" });
         }
